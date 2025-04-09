@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Protected Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 30px;
+      background-color: #f9f9f9;
+    }
+    #protectedContent {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    const password = "letmein"; // Change this password as needed
+
+    const userInput = prompt("Enter the password to access this page:");
+
+    if (userInput === password) {
+      document.write('<div id="protectedContent"><h2>Welcome!</h2><p>This is the protected section of the site.</p></div>');
+    } else {
+      document.write("<h2>Access Denied</h2><p>Incorrect password.</p>");
+    }
+  </script>
+
+</body>
+</html>
